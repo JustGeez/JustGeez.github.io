@@ -23,11 +23,6 @@ body {
   width: 1000px;
 }
 
-.detail-heading {
-  border-bottom: 3px solid black;
-  text-shadow: lightgrey 2px 2px;
-}
-
 .bold {
   font-weight: bold;
 }
@@ -113,6 +108,11 @@ a {
 }
 
 /* DETAILS PANE */
+.detail-heading {
+  border-bottom: 3px solid black;
+  text-shadow: lightgrey 2px 2px;
+}
+
 .detail-entry {
   margin: 20px 0px;
   background-color: #2121210e;
@@ -176,4 +176,19 @@ a {
 .hobby-icons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+}
+
+.hobby-icon {
+  border-radius: 5px;
+  height: 70px;
+  width: 70px;
+
+  text-align: center;
+  padding: 10px;
+}
+
+.hobby-icon p {
+  font-size: 12px;
+  margin-top: 10px;
 }
