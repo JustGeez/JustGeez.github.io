@@ -1,7 +1,7 @@
 /* Development */
-/* section, div {
+section, div {
   border: 1px dotted black;
-} */
+}
 
 /* Resets */
 
@@ -72,6 +72,7 @@ a {
 /* INTRO PANE */
 .intro-entry {
   margin: 40px 0px;
+  width: 100%;
 }
 
 #intro-pane {
@@ -98,11 +99,17 @@ a {
 }
 
 .contact-entry {
-  margin: 5px;
+  margin: 20px 0px;
+  width: 100%;
 }
 
 .contact-entry p {
   margin: 2px;
+}
+
+.contact-entry-center {
+  display: flex;
+  justify-content: space-around;
 }
 
 /* DETAILS PANE */
