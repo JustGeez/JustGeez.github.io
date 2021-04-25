@@ -1,8 +1,8 @@
-/* Setup global vars */
+/* GLOBAL VARS */
 :root {
   --space: 10px;
 
-  --main-colr-dark: #212121;
+  --main-colr-dark: #313030;
   --main-colr-light: white;
 
   --accent-colr-dark: #2121210e;
@@ -12,12 +12,12 @@
   --text-colr-light: white;
 }
 
-/* Development */
-/* section, div {
+/* DEVELOPMENT */
+section, div, footer, header {
   border: 1px dotted black;
-} */
+}
 
-/* Resets */
+/* RESETS */
 * {
 	outline: 0;
 	padding: 0;
@@ -25,12 +25,12 @@
 	border: 0;
 	}
 
-/* General */
+/* GENERAL */
 body {
   font-family: 'Montserrat', sans-serif;
   display: grid;
   place-items: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .dark {
@@ -42,6 +42,7 @@ body {
   display: flex;
   flex-direction: row;
   max-width: 1000px;
+  margin: 30px 0px;
 }
 
 .bold {
@@ -84,9 +85,14 @@ a {
   font-weight: 500;
 }
 
+.hashtag {
+  font-weight: 500;
+}
+
 /* INTRO PANE */
 .intro-entry {
   width: 100%;
+  margin: 10px 0px;
 }
 
 #intro-pane {
@@ -101,7 +107,6 @@ a {
   position: sticky;
   top: var(--offset);
 
-  height: 95vh;
 }
 
 #intro-info {
@@ -115,11 +120,13 @@ a {
 #photo-and-name {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  min-height: 350px;
 }
 
 #profile-pic {
+  margin-bottom: 20px;
   max-height: 400px;
   max-width: 400px;
   width: 80%;
@@ -144,6 +151,7 @@ a {
 .detail-heading {
   border-bottom: 3px solid var(--text-colr-dark);
   text-shadow: lightgrey 2px 2px;
+  margin: 20px 0px;
 }
 
 .detail-entry {
@@ -162,7 +170,7 @@ a {
 .skill {
   display: grid;
   grid-template-columns: 30% 1fr;
-  margin: 5px 0px;
+  margin: 10px 0px;
 }
 
 .skill-bar {
@@ -211,6 +219,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   place-items: center;
+  margin-top: 20px;
 }
 
 .hobby-icon {
