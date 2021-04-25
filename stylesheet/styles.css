@@ -1,3 +1,17 @@
+/* Setup global vars */
+:root {
+  --space: 10px;
+
+  --main-colr-dark: #212121;
+  --main-colr-light: white;
+
+  --accent-colr-dark: #2121210e;
+  --accent-colr-light: white;
+
+  --text-colr-dark: black;
+  --text-colr-light: white;
+}
+
 /* Development */
 section, div {
   border: 1px dotted black;
@@ -13,14 +27,18 @@ body {
 }
 
 .dark {
-  background-color: #212121;
-  color: white;
+  background-color: var(--main-colr-dark);
+  color: var(--text-colr-light);
 }
 
 .parent {
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+
+  /* display: grid;
   grid-template-columns: minmax(280px, 25%) 1fr;
-  width: 1000px;
+  width: 1000px; */
 }
 
 .bold {
@@ -54,14 +72,13 @@ p {
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--text-colr-light);
 }
 
 .date-text {
   font-style: italic;
   font-size: 12px;
   font-weight: 500;
-  color: #2c2c2c;
 }
 
 /* INTRO PANE */
@@ -71,26 +88,39 @@ a {
 }
 
 #intro-pane {
+  align-self: flex-start;
+
   margin-right: 10px;
-  padding: 10px 10px;
+
+  padding: 10px;
   border-radius: 5px;
+
+  --offset: var(--space);
+  position: sticky;
+  top: var(--offset);
 }
 
 #intro-info {
-  position: fixed;
-  width: 245px;
-  z-index: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 #photo-and-name {
-  display: grid;
+  /* display: grid;
   grid-template-rows: 260px 50px 50px;
   place-items: center;
-  margin-top: 0px;
+  margin-top: 0px; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #profile-pic {
-  width: 90%;
+  width: 80%;
+  max-height: 400px;
+  max-width: 400px;
 }
 
 .contact-entry {
@@ -109,13 +139,14 @@ a {
 
 /* DETAILS PANE */
 .detail-heading {
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid var(--text-colr-dark);
   text-shadow: lightgrey 2px 2px;
 }
 
 .detail-entry {
   margin: 20px 0px;
-  background-color: #2121210e;
+  background-color: var(--accent-colr-dark);
+
   padding: 10px;
   border-radius: 5px;
 }
@@ -129,15 +160,14 @@ a {
   display: grid;
   grid-template-columns: 30% 1fr;
   margin: 5px 0px;
-  border: 5px solid white;
 }
 
 .skill-bar {
-  background-color: lightgrey;
+  background-color: var(--accent-colr-dark);
 }
 
 .skill-progress {
-  background-color: #212121;
+  background-color: vaR(--main-colr-dark);
   height: 80%;
 }
 
@@ -180,15 +210,33 @@ a {
 }
 
 .hobby-icon {
-  border-radius: 5px;
   height: 70px;
   width: 70px;
 
   text-align: center;
+
+  border-radius: 5px;
   padding: 10px;
 }
 
 .hobby-icon p {
   font-size: 12px;
   margin-top: 10px;
+}
+
+@media only screen and (max-width: 950px) {
+  /* Mobile phones */
+  .parent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #intro-pane {
+    position: unset;
+    align-self: unset;
+  }
+
+  .intro-entry {
+    text-align: center;
+  }
 }
