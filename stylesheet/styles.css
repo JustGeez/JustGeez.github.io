@@ -13,9 +13,9 @@
 }
 
 /* DEVELOPMENT */
-section, div, footer, header {
+/* section, div, footer, header {
   border: 1px dotted black;
-}
+} */
 
 /* RESETS */
 * {
@@ -51,6 +51,11 @@ body {
 
 .light-bold {
   font-weight: 600;
+}
+
+hr {
+  border-bottom: 2px solid var(--main-colr-light);
+  margin: 20px 10px;
 }
 
 /* FONT STYLES */
@@ -92,7 +97,7 @@ a {
 /* INTRO PANE */
 .intro-entry {
   width: 100%;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 
 #intro-pane {
@@ -122,7 +127,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 350px;
+  min-height: 300px;
 }
 
 #profile-pic {
@@ -162,8 +167,12 @@ a {
   border-radius: 5px;
 }
 
-.detail-entry h4,p {
+.detail-entry p {
   margin: 2px;
+}
+
+.detail-entry h4 {
+  margin: 5px;
 }
 
 /* SKILLS */
@@ -223,13 +232,15 @@ a {
 }
 
 .hobby-icon {
+  display: grid;
+  place-items: center;
   text-align: center;
 
+  background-color: var(--accent-colr-dark);
   border-radius: 5px;
-  padding: 10px;
 
-  height: 70px;
-  width: 70px;
+  height: 90px;
+  width: 100px;
 }
 
 .hobby-icon p {
