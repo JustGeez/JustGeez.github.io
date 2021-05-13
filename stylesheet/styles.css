@@ -188,8 +188,7 @@ a {
 
 .skill-progress {
   background-color: var(--main-colr-dark);
-
-  height: 80%;
+  height: 50%;
 }
 
 .sr-20 {
@@ -250,6 +249,26 @@ a {
 .hobby-icon p {
   font-size: 12px;
   margin-top: 10px;
+}
+
+/* ANIMATIONS */
+.wobble:hover {
+  -webkit-animation-name: wiggle;
+  -ms-animation-name: wiggle;
+  -ms-animation-duration: 200ms;
+  -webkit-animation-duration: 200ms;
+  -webkit-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+}
+
+@keyframes wiggle {
+  0% {transform: rotate(5deg);}
+  25% {transform: rotate(-5deg);}
+  50% {transform: rotate(5deg);}
+  75% {transform: rotate(-5deg);}
+  100% {transform: rotate(0deg);}
 }
 
 /* RESPONSIVE DESIGN */
